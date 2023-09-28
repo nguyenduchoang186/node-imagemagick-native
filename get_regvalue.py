@@ -2,11 +2,11 @@ import winreg
 
 def get_regvalue(regkey, regvalue):
 
-    explorer = _winreg.OpenKey(
-        _winreg.HKEY_LOCAL_MACHINE,
+    explorer = winreg.OpenKey(
+        winreg.HKEY_LOCAL_MACHINE,
         regkey,
         0,
-        _winreg.KEY_READ | _winreg.KEY_WOW64_64KEY
+        winreg.KEY_READ | winreg.KEY_WOW64_64KEY
     )
     
     value, type = _winreg.QueryValueEx(explorer, regvalue)
