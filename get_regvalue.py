@@ -9,7 +9,7 @@ def get_regvalue(regkey, regvalue):
         winreg.KEY_READ | winreg.KEY_WOW64_64KEY
     )
     
-    value, type = _winreg.QueryValueEx(explorer, regvalue)
+    value, type = winreg.QueryValueEx(explorer, regvalue)
 
     return value
 
