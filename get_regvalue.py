@@ -1,4 +1,4 @@
-import _winreg
+import winreg 
 
 def get_regvalue(regkey, regvalue):
 
